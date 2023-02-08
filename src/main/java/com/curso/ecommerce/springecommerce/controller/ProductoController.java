@@ -2,7 +2,8 @@ package com.curso.ecommerce.springecommerce.controller;
 
 import java.util.Optional;
 
-import org.slf4j.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -60,6 +61,12 @@ public class ProductoController {
 	@PostMapping("/update")
 	public String update(Producto producto) {
 		productoService.update(producto);
+		return "redirect:/productos";
+	}
+	
+	@GetMapping("/delete/{id}")
+	public String delete(@PathVariable Integer id) {
+		productoService.delete(id);
 		return "redirect:/productos";
 	}
 }
