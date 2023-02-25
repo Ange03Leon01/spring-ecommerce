@@ -63,7 +63,7 @@ public class Orden {
 	}
 
 	public void setFechaCreacion(Date fechaCreacion) {
-		this.fechaCreacion = fechaCreacion;
+		this.fechaCreacion = fechaCreacion; 
 	}
 
 	public Date getFechaRecibida() {
